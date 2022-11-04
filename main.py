@@ -102,7 +102,7 @@ def telegram_parser(session, api_id, api_hash, telegram_channels):
         #         print(f'{chanel_id} -----уже было------')
         #         return
 
-        if await get_history(event.raw_text, 20):
+        if await get_history(event.raw_text, 0):
             print(f'{chanel_id} -----уже было------')
             return
 
@@ -131,22 +131,22 @@ async def get_history(income_message, amount_messages):
     return False
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    telegram_channels = {
-        1671940764: 'https://t.me/buenas_hatas',
-        1762313483: 'https://t.me/alquilar_BuenosAires',
-        1594905108: 'https://t.me/arendaArgentinaprop',
-        1734338501: 'https://t.me/ruargentinadom',
-        1532197220: 'https://t.me/fromtestchannel',
-        1651128175: 'https://t.me/alquilertemporariobsas',
-        1890281683: 'https://t.me/argentina_apartamentos',
-        1632649859: 'https://t.me/ArgentinaHouse',
-        1532876637: 'https://t.me/arendacaba',
-        1585013175: 'https://t.me/apartment_in_Buenos_Aires',
-        1591166110: 'https://t.me/alquilertemporario2022',
-    }
+telegram_channels = {
+    1671940764: 'https://t.me/buenas_hatas',
+    1762313483: 'https://t.me/alquilar_BuenosAires',
+    1594905108: 'https://t.me/arendaArgentinaprop',
+    1734338501: 'https://t.me/ruargentinadom',
+    1532197220: 'https://t.me/fromtestchannel',
+    1651128175: 'https://t.me/alquilertemporariobsas',
+    1890281683: 'https://t.me/argentina_apartamentos',
+    1632649859: 'https://t.me/ArgentinaHouse',
+    1532876637: 'https://t.me/arendacaba',
+    1585013175: 'https://t.me/apartment_in_Buenos_Aires',
+    1591166110: 'https://t.me/alquilertemporario2022',
+}
 
-    client = telegram_parser('sdgsdfgsdfgsdfgshgjhhfkjkghklgh777777777777777777lk', api_id, api_hash, telegram_channels)
+client = telegram_parser('sdgsdfgsdfgsdfgshgjhhfkjkghklgh777777777777777777lk', api_id, api_hash, telegram_channels)
 
-    client.run_until_disconnected()
+client.run_until_disconnected()
