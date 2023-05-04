@@ -132,3 +132,4 @@ dmypy.json
 photo/
 .photo/
 base.db
+dictionary.py
